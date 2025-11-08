@@ -9,7 +9,7 @@ Chương trình thực hiện tìm đường đi ngắn nhất trong kho hàng (
 II-CÁCH CHẠY CHƯƠNG TRÌNH
     1-Tạo file input.txt trong thư mục Team4/BT1 cùng thư mục với solution.cpp(nếu đã có file rồi thì không cần tạo thêm).
     2-Ghi dữ liệu bản đồ vào file này theo đúng định dạng này.
-    ----------ĐỊNH DẠNG--------
+    ------ĐỊNH DẠNG INPUT------
     --  n m                  --
     --  a11 a12 a13 ... a1m  --
     --  a21 a22 a23 ... a2m  --
@@ -20,6 +20,16 @@ II-CÁCH CHẠY CHƯƠNG TRÌNH
             - n = số hàng.
             - m = số cột.
             - Các giá trị trong ma trận là 0, 1, 2 hoặc 3.
+/----------------------------------------------------------
+    Kết quả in ra dạng bản đồ, trong đó:
+    ------ĐỊNH DẠNG INPUT-------
+    -- (#): tường              --
+    -- (.): ô trống có thể đi  --
+    -- (*): đường đi ngắn nhất --
+    -- (S): điểm bắt đầu       --
+    -- (E): điểm kết thúc      --
+    -----------------------------
+
     3-Chạy chương trình bằng một trong các cách:
         Cách 1 (PowerShell / CMD):("Vì giảng viên chấm bài trên github nên dùng cách này sẽ tối ưu hơn và em sẽ có file ppt hướng dẫn chạy trên github")
             g++ solution.cpp -o solution.exe
@@ -28,3 +38,9 @@ II-CÁCH CHẠY CHƯƠNG TRÌNH
         Cách 2 (VS Code):
             Nhấn Ctrl + F5 (Run without Debugging).
             Kết quả sẽ được ghi vào file output.txt.
+
+III- GHI CHÚ
+
+Nếu không tồn tại đường đi, chương trình sẽ in:
+    "Không có đường đi!"
+Chương trình sử dụng BFS, đảm bảo đường tìm được là ngắn nhất.
